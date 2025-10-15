@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Generador de Contratos</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Generador de Contratos</h1>
+
+  <!--Bloque de automatización-->
+  <div class="container">
+    <!-- <h1>Consulta de Código</h1> -->
+
+    <label for="codigo">Selecciona un plan:</label>
+    <select id="codigo" onchange="buscarValor()">
+      <option value="">-- Selecciona --</option>
+      <option value="A001">Móvil S</option>
+      <option value="A002">Móvil M</option>
+      <option value="A003">Móvil L</option>
+      <option value="A004">Móvil XL</option>
+      <!-- <option value="A005">A005</option>
+      <option value="A006">A006</option>
+      <option value="A007">A007</option>
+      <option value="A008">A008</option>
+      <option value="A009">A009</option>
+      <option value="A010">A010</option> -->
+    </select>
+
+    <label for="resultado">Caracteristicas:</label>
+    <div id="resultado" class="resultado-box">Selecciona un código para ver el resultado</div>
+  
+    <form id="contractForm">
+    <label>Nombre del titular: <input id="nombre" required /></label>
+    <label>Dirección: <input id="direccion" required /></label>
+    <!-- <label>Nombre del plan: <input id="plan" required /></label> -->
+    <!-- <label>Valor del plan: <input id="valorPlan" required /></label> -->
+    <!-- <label>Valor promocional: <input id="valorPromo" required /></label> -->
+    <label>Ciclo de facturación: <input id="ciclo" required /></label>
+    <label>Fecha de instalación: <input id="fecha" type="date" required /></label>
+    <button type="submit">Generar contrato</button>
+    <button type="button" id="visualizarButton">Visualizar contrato</button>
+  </form>
+  
+  
+  
+  </div>
+
+  <!--Form-->
+
+  
+
+  <!-- Este bloque se usa para preview y captura fija -->
+  <div id="pdf-capture">
+    <div id="preview">Aquí se mostrará el contrato generado.</div>
+  </div>
+
+  <!-- Dependencias -->
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pizzip@3.1.5/dist/pizzip.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pizzip@3.1.5/dist/pizzip-utils.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docxtemplater@3.37.0/build/docxtemplater.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docx-preview@0.1.15/dist/docx-preview.js"></script>
+
+  <!-- Correcciones: carga jsPDF y html2canvas antes de main.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <!--Leer excel-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+
+  <!-- Tu lógica de almacenamiento IndexedDB -->
+  <script src="db.js"></script>
+  <!-- Lógica principal -->
+  <script src="main.js"></script>
+</body>
+</html>

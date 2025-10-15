@@ -1,0 +1,112 @@
+body {
+  font-family: sans-serif;
+  margin: 40px;
+}
+
+form {
+  margin-bottom: 30px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input {
+  width: 300px;
+  padding: 6px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Contenedor centrado y ancho fijo (versión definitiva) */
+#pdf-capture {
+  width: 800px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Opcional: ajustes para impresión limpia */
+@media print {
+  #pdf-capture {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+  }
+}
+
+/*Apariencia del automatizador*/
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 40px;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 15px;
+  display: block;
+  color: #555;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.resultado-box {
+  background-color: #f9f9f9;
+  border-left: 4px solid #007bff;
+  padding: 15px;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #333;
+  white-space: pre-wrap;
+  transition: all 0.3s ease;
+  min-height: 50px;
+}
+
+
+
+input#nombre,
+input#direccion,
+input#ciclo,
+input#fecha {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
